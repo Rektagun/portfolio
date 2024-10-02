@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* * { outline: 1px red solid; } */
+
+
+::selection {
+  color: black;
+  background: darkgrey;
+  opacity: 0.5;
+}
+
+@keyframes blur-animation {
+
+0%, 100% {
+  filter: blur(32px);
+  opacity: 0;
+}
+
+50% {
+  filter: blur(2080px);
+  opacity: 0.20;
+}
+
+}
+
+@keyframes blur-animation2 {
+
+0%, 100% {
+  filter: blur(32px);
+  opacity: 0;
+}
+
+75% {
+  filter: blur(256px);
+  opacity: .25;
+}
+
+25% {
+  filter: blur(256px);
+  opacity: .25;
+}
+
+
+50% {
+  filter: blur(1080px);
+  opacity: .50;
+}
+
+}
+
+.ani-blur2 {
+  animation: blur-animation2 16s linear infinite; }
+
+.ani-blur {
+  animation: blur-animation 24s ease-in-out infinite; }
